@@ -1,0 +1,6 @@
+= Creating Conversations with DialogFlow
+Ryan Schuetzler <rschuetzler@unomaha.edu>
+v0.1, 2018-03-07
+
+Google provides access to its awesome human language recognition capabilities through a tool called DialogFlow (https://dialogflow.com/).
+
