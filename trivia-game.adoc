@@ -1,4 +1,4 @@
-= Creating Conversations with Google
+= Create a Trivia Game with Google
 Ryan Schuetzler <rschuetzler@unomaha.edu>
 v0.1, 2018-03-07
 :imagesdir: ./images
