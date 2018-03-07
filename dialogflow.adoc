@@ -1,7 +1,8 @@
-= Creating Conversations with DialogFlow
+= Creating Conversations with Google
 Ryan Schuetzler <rschuetzler@unomaha.edu>
 v0.1, 2018-03-07
 :imagesdir: ./images
+:icons: font
 
 Google provides access to its awesome human language recognition capabilities through a tool called DialogFlow (https://dialogflow.com/).
 This tutorial walks through a few different ways DialogFlow can be used to create tools for the classroom.
@@ -33,4 +34,60 @@ image::personality.png[Personality]
 .Click to make a copy of a template Google Sheet
 image::pre-filled.png[Pre-filled sheet]
 
-. Rename the Google Sheet
+. Rename the Google Sheet to something so you can remember what it's about.
+. Click the Configuration tab at the bottom.
++
+.Click the configuration tab
+image::config-tab.png[Configuration tab]
+
+. Change the value of the Title (B8) to something relevant.
+. Go back to the Questions & Answers tab.
+
+=== Creating your questions
+In the Trivia game spreadsheet, you have 5 columns of information to fill out.
+
+. In column A you'll put your questions.
+. In Column B, put the correct answer to the question.
++
+TIP: If there are multiple correct answers, you can separate them with the `|` character (hold Shift and press the `\` key.
+
+. In Columns C & D, put two other options for the answer. The Trivia Game template creates a multiple choice quiz, so you can provide up to two wrong answer choices.
+. In Column E, put additional information to be given after the answer is given.
+. Once you are satisfied with your questions, copy the URL from the address bar.
+. Go back to the "Actions on Google" page and click Next.
+. Paste the URL of your spreadsheet into the box and click "UPLOAD".
++
+.Add your spreadsheet's URL
+image::upload-spreadsheet.png[Upload Spreadsheet]
+
+. Once the import is complete, click "CREATE APP"
+
+TIP: You can also customize the audio sounds played during the quiz. For more information, go to this link: https://developers.google.com/actions/templates/trivia#configuration_parameters
+
+=== Getting ready to test
+Before we can test your app, there's a bit of work we need to do so everybody doesn't have the same "Test app" name.
+
+. Click Overview in the top left corner of the page.
++
+.Click Overview to edit app information.
+image::overview.png[Overview]
+
+. Click "Edit" to change your app's name. I will call mine Code Crush Trivia.
+. Click "Save" at the bottom of the page. You'll get errors, but those should only matter if you're trying to publish the app for public use in the Google Actions directory.
+. Go back to the Overview tab and click "Test Draft" in the bottom right.
+. Now you can go to the Simulator tab on the left to try out your game. Type "Talk to [App name]" to get started.
+
+=== To publish to the Code Crush Google Home
+To try out your trivia game on the Google Homes in the Code Crush lessons, you'll need to share the Actions with your assigned helper.
+
+. Click the Gear icon next to Overview in the top left.
+. Click "Permissions."
+. Click "Add" at the top of the page.
+. Enter the email address attached to the Google Home you plan to use.
+. Under "Select a role", choose Project in the left column, and Viewer in the right.
+. Go back to the Simulator
+. Click the share icon in the upper-right (three connected dots in a sideways V shape)
+. Get the link to the Google Home person.
+. Once they have clicked the link, you should be able to ask the Google Home to talk to your application.
+
+== Extra Activities
