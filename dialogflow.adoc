@@ -1,6 +1,36 @@
 = Creating Conversations with DialogFlow
 Ryan Schuetzler <rschuetzler@unomaha.edu>
 v0.1, 2018-03-07
+:imagesdir: ./images
 
 Google provides access to its awesome human language recognition capabilities through a tool called DialogFlow (https://dialogflow.com/).
+This tutorial walks through a few different ways DialogFlow can be used to create tools for the classroom.
 
+== Sign up
+
+
+== Creating Trivia games with Templates
+Possibly the easiest way to bring conversation into the classroom is with templates.
+The templates aren't really a full conversation, but they'll allow you to quickly create an interactive quiz game with basically no programming required.
+It's as easy as typing into a spreadsheet!
+
+. Go to https://console.actions.google.com/
+. Click the \+ to add a new project
+. Name your project whatever you like. I'll go with "TriviaTest" for this demo.
+. Click "BUILD" inside the "Trivia" box below.
++
+.Choose trivia game from this menu
+image::trivia-game.png[Trivia Game]
+
+. Choose which personality you want your quiz show host to have, then click "Next."
++
+.Choose a personality from this menu
+image::personality.png[Personality]
+
+. Click the button to "Bulk upload the content for your app using Google Sheets"
+. Click the link to "Make a copy of the pre-filled Google Sheet"
++ 
+.Click to make a copy of a template Google Sheet
+image::pre-filled.png[Pre-filled sheet]
+
+. Rename the Google Sheet
