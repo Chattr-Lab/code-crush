@@ -92,7 +92,7 @@ To add questions, you'll need to edit the Google sheet, then re-upload.
 . Go to the Overview section of your app at console.actions.google.com.
 . Click "Actions," then Trivia actions, then go to the Content section to reupload. 
 
-= Extra Activities
+== Extra Activities
 
 - Create a Trivia game in a different language by adding a language during the creation process
 - Customize the music and sounds played during the trivia game by adding things to the Configuration tab (https://developers.google.com/actions/templates/trivia#configuration_parameters)
