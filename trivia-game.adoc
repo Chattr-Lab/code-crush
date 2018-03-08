@@ -75,7 +75,7 @@ image::overview.png[Overview]
 . Click "Edit" to change your app's name. I will call mine Code Crush Trivia.
 . Click "Save" at the bottom of the page. You'll get errors, but those should only matter if you're trying to publish the app for public use in the Google Actions directory.
 . Go back to the Overview tab and click "Test Draft" in the bottom right.
-. Now you can go to the Simulator tab on the left to try out your game. Type "Talk to [App name]" to get started.
+. Now you can go to the Simulator tab on the left to try out your game. Type or say "Talk to [App name]" to get started.
 
 === To publish to the Code Crush Google Home
 To try out your trivia game on the Google Homes in the Code Crush lessons, you'll need to share the Actions with your assigned helper.
@@ -90,4 +90,18 @@ To try out your trivia game on the Google Homes in the Code Crush lessons, you'l
 . Get the link to the Google Home person.
 . Once they have clicked the link, you should be able to ask the Google Home to talk to your application.
 
+=== Adding Questions
+To add questions, you'll need to edit the Google sheet, then re-upload.
+
+. Go to the Overview section of your app at console.actions.google.com.
+. Click "Actions," then Trivia actions, then go to the Content section to reupload. 
+
 == Extra Activities
+
+- Create a Trivia game in a different language by adding a language during the creation process
+- Customize the music and sounds played during the trivia game by adding things to the Configuration tab (https://developers.google.com/actions/templates/trivia#configuration_parameters)
+- Add categories and difficulty markers to your questions. Follow the example here: http://bit.ly/2oTiCoN. Make sure to check the Configuration tab for extra information.
++
+TIP: When adding difficulty and categories, make sure you have enough questions in each category. Check your `QuestionsPerGame` configuration parameter.
+
+- Create a Flash cards application (https://developers.google.com/actions/templates/flash-cards) or a personality quiz (https://developers.google.com/actions/templates/personality-quiz)
