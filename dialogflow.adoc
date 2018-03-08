@@ -150,19 +150,51 @@ Now that we have populated our `given-name` parameter, we want to use it to resp
 .. This should open a pop-up window with a list of your parameters from above. Select the `$given-name` parameter.
 . Click Save, wait for Training, and test your agent in the test console. Notice that if you now include a name in your message, the agent repeats the name back to you.
 
-== Creating your Entities
+== Creating custom entities
+Entities are how your DialogFlow agent recognizes what you are talking about. 
+For many applications, the built-in entities are good enough.
+There are built-in entities to match numbers, dates, music genres, currency names, and many others.
+For a complete list, check out https://dialogflow.com/docs/reference/system-entities.
+
+However, there may be times when you need to define your own entity.
+One entity I have created is medication names.
+If I want DialogFlow to recognize when users have entered the name of a medication, I first have to teach it what the medications are that I want to recognize.
+
+We're going to create a new entity to recognize the names of programming languages so we can ask our users about their favorite language.
+
+. Click the \+ next to Entities on the left.
+. Type the name `programming-language` for the Entity. Entity names can be almost anything, but they can't include spaces.
+. Leave the box checked for "Define synonyms." Synonyms are a way of telling DialogFlow that there is more than one way a user can be referring to the same entity. For example, "veggies" and "vegetables" would likely be referring to the same thing.
+. Leave the box unchecked for "Allow automated expansion." For more on what automated expansion means, see the documentation: https://dialogflow.com/docs/entities.
+. Let's add some programming languages. Enter the following as "reference values."
+.. Python
+.. C
+.. C++
+.. Ruby
+.. Java
+.. Javascript
+. For Javascript, enter the following as synonyms:
+.. Node.js
+.. Node
+.. Jquery
+. Now add a new intent called "Set Favorite Language". Give it some training phrases.
++
+IMPORTANT: DialogFlow will only recognize values for custom entities that are included in the Entities list or as a synonym. If you have a favorite programming language that's not on the list, you need to add it. If you want to be able to match any programming language, you'll need to input the full list of languages (start here https://en.wikipedia.org/wiki/List_of_programming_languages).
+
 
 == Context
 
 == Deploy to Google Home
-To deploy our action to a Google Home, we'll need to go to the Actions console
+To test your app out on Google Home, click the "See how it works in Google Assistant" link in the test console. This will drop you in the simulator. There you can follow the same deployment steps as in the Trivia Game tutorial, including adding the Google Home person to your project (gears icon) and sharing the link with them.
 
-. Go to https://console.actions.google.com
-. If you see the name of your agent in your projects list, click it. If not, click \+ to add a new project.
-.. Click the box to Enter a name or choose a project.
-.. Select your agent from the list that pops up.
-. Click "Add Actions"
-. Click "BUILD" in the DialogFlow box.
+// To deploy our action to a Google Home, we'll need to go to the Actions console
+
+// . Go to https://console.actions.google.com
+// . If you see the name of your agent in your projects list, click it. If not, click \+ to add a new project.
+// .. Click the box to Enter a name or choose a project.
+// .. Select your agent from the list that pops up.
+// . Click "Add Actions"
+// . Click "BUILD" in the DialogFlow box. That should 
 
 == Extra Activities
 
