@@ -185,7 +185,7 @@ IMPORTANT: DialogFlow will only recognize values for custom entities that are in
 == Context
 
 == Deploy to Google Home
-To test your app out on Google Home, click the "See how it works in Google Assistant" link in the test console. This will drop you in the simulator. There you can follow the same deployment steps as in the Trivia Game tutorial, including adding the Google Home person to your project (gears icon) and sharing the link with them.
+To test your app out on Google Home, click the "See how it works in Google Assistant" link in the test console. This will drop you in the simulator. There you can follow the same deployment steps as in the Trivia Game tutorial, including adding the Google Home person to your project (gears icon) and sharing the link with them. See <<trivia-game.adoc#deploy,the Trivia Game tutorial>>
 
 // To deploy our action to a Google Home, we'll need to go to the Actions console
 

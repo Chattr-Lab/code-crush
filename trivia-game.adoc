@@ -72,6 +72,7 @@ image::overview.png[Overview]
 . Go back to the Overview tab and click "Test Draft" in the bottom right.
 . Now you can go to the Simulator tab on the left to try out your game. Type or say "Talk to [App name]" to get started.
 
+[#deploy]
 === To test on the Code Crush Google Home
 To try out your trivia game on the Google Homes in the Code Crush lessons, you'll need to share the Actions with your assigned helper.
 
