@@ -4,13 +4,6 @@ v0.1, 2018-03-07
 :imagesdir: ./images
 :icons: font
 
-Google provides access to its awesome human language recognition capabilities through a tool called DialogFlow (https://dialogflow.com/).
-This tutorial walks through a few different ways DialogFlow can be used to create tools for the classroom.
-
-== Sign up
-
-
-== Creating Trivia games with Templates
 Possibly the easiest way to bring conversation into the classroom is with templates.
 The templates aren't really a full conversation, but they'll allow you to quickly create an interactive quiz game with basically no programming required.
 It's as easy as typing into a spreadsheet!
@@ -43,7 +36,7 @@ image::config-tab.png[Configuration tab]
 . Change the value of the Title (B8) to something relevant.
 . Go back to the Questions & Answers tab.
 
-=== Creating your questions
+== Creating your questions
 In the Trivia game spreadsheet, you have 5 columns of information to fill out.
 
 . In column A you'll put your questions.
@@ -64,7 +57,7 @@ image::upload-spreadsheet.png[Upload Spreadsheet]
 
 TIP: You can also customize the audio sounds played during the quiz. For more information, go to this link: https://developers.google.com/actions/templates/trivia#configuration_parameters
 
-=== Getting ready to test
+== Getting ready to test
 Before we can test your app, there's a bit of work we need to do so everybody doesn't have the same "Test app" name.
 
 . Click Overview in the top left corner of the page.
@@ -77,7 +70,7 @@ image::overview.png[Overview]
 . Go back to the Overview tab and click "Test Draft" in the bottom right.
 . Now you can go to the Simulator tab on the left to try out your game. Type or say "Talk to [App name]" to get started.
 
-=== To publish to the Code Crush Google Home
+=== To test on the Code Crush Google Home
 To try out your trivia game on the Google Homes in the Code Crush lessons, you'll need to share the Actions with your assigned helper.
 
 . Click the Gear icon next to Overview in the top left.
@@ -90,13 +83,13 @@ To try out your trivia game on the Google Homes in the Code Crush lessons, you'l
 . Get the link to the Google Home person.
 . Once they have clicked the link, you should be able to ask the Google Home to talk to your application.
 
-=== Adding Questions
+== Adding Questions
 To add questions, you'll need to edit the Google sheet, then re-upload.
 
 . Go to the Overview section of your app at console.actions.google.com.
 . Click "Actions," then Trivia actions, then go to the Content section to reupload. 
 
-== Extra Activities
+= Extra Activities
 
 - Create a Trivia game in a different language by adding a language during the creation process
 - Customize the music and sounds played during the trivia game by adding things to the Configuration tab (https://developers.google.com/actions/templates/trivia#configuration_parameters)
