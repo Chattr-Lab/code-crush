@@ -5,4 +5,52 @@ v0.1, 2018-03-07
 :icons: font
 
 Google provides access to its awesome human language recognition capabilities through a tool called DialogFlow (https://dialogflow.com/).
-This tutorial walks through a few different ways DialogFlow can be used to create tools for the classroom.
+This tutorial walks through how to create a basic DialogFlow agent.
+
+== Create your Agent
+
+. Go to https://dialogflow.com
+. Click the Go to Console button in the top right
++
+.Click the Go to Console button
+image::go-to-console.png[Go to console]
+
+. Click "Create Agent" on the left.
++
+.Click the "Create Agent" button
+image::create-agent.png[Create agent]
+. Name your agent at the top of the page. I have named mine Steve.
+. In the Google Project section, select the option to create a new Google project. This will be how you deploy the application later.
++
+.Create a new Google project
+image::create-project.png[Create project]
+
+. Leave the API Version slider to the left.
+. When you're ready, click the "CREATE" button in the top right.
+
+== Share your agent
+In order to test your agent on the Google Homes in the Code Crush classroom, you need to share it with the person assigned to your Google Home.
+
+. Click the gear next to your agent's name in the top left.
++
+.Click the gear next to your agent's name
+image::agent-settings.png[Agent settings]
+
+. Go to the Share tab and enter the email address of the person you are assigned to.
+. Add them as a Reviewer, then click ADD.
+. Click SAVE at the top of the share page.
+
+== Setting up Intents
+Intents are DialogFlow's way of classifying what your users are trying to do when they talk.
+Example intents might be:
+
+- Greeting
+- Check the weather
+- Add a task
+- Get directions
+
+
+
+== Creating your Entities
+
+== Context
