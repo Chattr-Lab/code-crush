@@ -49,7 +49,19 @@ Example intents might be:
 - Add a task
 - Get directions
 
+DialogFlow agents come with two default intents.
+You are free to add to those, delete them, or modify them as you want.
 
+- Click on the "Default Welcome Intent"
+
+Notice that the Intent screen consists of 6 collapsable sections:
+
+- *Contexts* keep track of what you are talking about. If you said "Play me some U2", the contexts could be "Playing music" and "Artist: U2". Then you could say "I want a different song," and knowing the context would allow your app to know you are referring to the music that is playing.
+- *Events* are ways to trigger intents without user input.
+- *Training phrases* are examples of things your users could say to trigger the intent. For a weather intent, it could include many different examples of how your users might ask about the weather.
+- *Actions and parameters* specify _actions_, which are what your agent does in response to the intent, and _parameters_, which are extra data you are trying to use to complete the action.
+- *Responses* are pre-programmed responses to the intent. 
+- *Fulfillment* is how you get your agent to actually _do_ something in response to an intent.
 
 == Creating your Entities
 
