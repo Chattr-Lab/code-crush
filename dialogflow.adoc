@@ -3,6 +3,7 @@ Ryan Schuetzler <rschuetzler@unomaha.edu>
 v0.1, 2018-03-07
 :imagesdir: ./images
 :icons: font
+:source-highlighter: rouge
 
 Google provides access to its awesome human language recognition capabilities through a tool called DialogFlow (https://dialogflow.com/).
 This tutorial walks through how to create a basic DialogFlow agent.
@@ -98,7 +99,7 @@ NOTE: If there is no Fulfillment generating a response, one of the responses fro
 === Create your own Intent
 Now we'll create our own intent to allow users to tell our agent their name.
 
-. Click the \+ next to Intents on the left.
+. Click the + next to Intents on the left.
 . Enter a name for your intent at the top. Call it "Set name"
 . Click to Add Training phrases
 . Enter the following Training phrases. Feel free to replace the names I've entered with names of your own:
@@ -162,7 +163,7 @@ If I want DialogFlow to recognize when users have entered the name of a medicati
 
 We're going to create a new entity to recognize the names of programming languages so we can ask our users about their favorite language.
 
-. Click the \+ next to Entities on the left.
+. Click the + next to Entities on the left.
 . Type the name `programming-language` for the Entity. Entity names can be almost anything, but they can't include spaces.
 . Leave the box checked for "Define synonyms." Synonyms are a way of telling DialogFlow that there is more than one way a user can be referring to the same entity. For example, "veggies" and "vegetables" would likely be referring to the same thing.
 . Leave the box unchecked for "Allow automated expansion." For more on what automated expansion means, see the documentation: https://dialogflow.com/docs/entities.
@@ -224,8 +225,26 @@ Thankfully, we can get through the basics without ever leaving the DialogFlow co
 . Save your changes
 . Go to the Fulfillment tab on the left.
 . Enable the "Inline Editor"
+. Put an extra line after line 46
+. Put the following code in the space:
++
+.add_numbers
+[source,javascript]
+----
+'add_numbers': () => {
+        var num1 = parameters["number1"];
+        var num2 = parameters["number2"];
+        var sum = num1 + num2;
+        if (requestSource === googleAssistantRequest) {
+        sendGoogleResponse("I got your sum right here: " + sum); // Send simple response to user
+      } else {
+        sendResponse("I got your sum right here: " + sum); // Send simple response to user
+      }
+    },
+----
 
-
+. Click DEPLOY
+. Once deployment completes, you can test your new function by asking the test agent to add two numbers.
 
 == Enable Small Talk
 DialogFlow agents can be given the ability to do a bit of small talk, too.
@@ -239,7 +258,7 @@ To test your app out on Google Home, click the "See how it works in Google Assis
 // To deploy our action to a Google Home, we'll need to go to the Actions console
 
 // . Go to https://console.actions.google.com
-// . If you see the name of your agent in your projects list, click it. If not, click \+ to add a new project.
+// . If you see the name of your agent in your projects list, click it. If not, click + to add a new project.
 // .. Click the box to Enter a name or choose a project.
 // .. Select your agent from the list that pops up.
 // . Click "Add Actions"
@@ -251,6 +270,7 @@ To test your app out on Google Home, click the "See how it works in Google Assis
 - Look under the integrations section for how to incorporate your agent into other messaging applications like Slack, Facebook Messenger, or Skype. Note that all of the integrations require developer accounts with the services you would like to integrate with.
 TIP: You can even export your DialogFlow agent to an Alexa Skill.
 - Import one of the Prebuilt Agents (under Prebuilt Agents on the left). This will create a new Agent with some prepopulated intents.
-- Create an agent that speaks a different language by clicking the \+ next to "en" under your agent's name on the left.
+- Create an agent that speaks a different language by clicking the + next to "en" under your agent's name on the left.
 - Check out the DialogFlow Docs (https://dialogflow.com/docs/) to learn about more things you can do with agents.
 - Fill out more of the Small Talk.
+- Add more intents with Webhooks in the Fulfillment viewer. Suggestions: Multiply or divide two numbers, find a way to add three numbers, or square one number.
