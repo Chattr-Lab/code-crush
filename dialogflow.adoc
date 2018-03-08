@@ -274,3 +274,4 @@ TIP: You can even export your DialogFlow agent to an Alexa Skill.
 - Check out the DialogFlow Docs (https://dialogflow.com/docs/) to learn about more things you can do with agents.
 - Fill out more of the Small Talk.
 - Add more intents with Webhooks in the Fulfillment viewer. Suggestions: Multiply or divide two numbers, find a way to add three numbers, or square one number.
+- *Really advanced*: Figure out how to call another web service from the fulfillment app to get the weather forecast or look up stock prices.
