@@ -8,6 +8,8 @@ Possibly the easiest way to bring conversation into the classroom is with templa
 The templates aren't really a full conversation, but they'll allow you to quickly create an interactive quiz game with basically no programming required.
 It's as easy as typing into a spreadsheet!
 
+== Create your Action
+
 . Go to https://console.actions.google.com/
 . Click the \+ to add a new project
 . Name your project whatever you like. I'll go with "TriviaTest" for this demo.
@@ -36,7 +38,7 @@ image::config-tab.png[Configuration tab]
 . Change the value of the Title (B8) to something relevant.
 . Go back to the Questions & Answers tab.
 
-== Creating your questions
+== Create your questions
 In the Trivia game spreadsheet, you have 5 columns of information to fill out.
 
 . In column A you'll put your questions.
@@ -57,7 +59,7 @@ image::upload-spreadsheet.png[Upload Spreadsheet]
 
 TIP: You can also customize the audio sounds played during the quiz. For more information, go to this link: https://developers.google.com/actions/templates/trivia#configuration_parameters
 
-== Getting ready to test
+== Get ready to test
 Before we can test your app, there's a bit of work we need to do so everybody doesn't have the same "Test app" name.
 
 . Click Overview in the top left corner of the page.
@@ -83,7 +85,7 @@ To try out your trivia game on the Google Homes in the Code Crush lessons, you'l
 . Get the link to the Google Home person.
 . Once they have clicked the link, you should be able to ask the Google Home to talk to your application.
 
-== Adding Questions
+== Add Questions
 To add questions, you'll need to edit the Google sheet, then re-upload.
 
 . Go to the Overview section of your app at console.actions.google.com.
