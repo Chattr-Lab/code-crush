@@ -177,15 +177,64 @@ We're going to create a new entity to recognize the names of programming languag
 .. Node.js
 .. Node
 .. Jquery
-. Now add a new intent called "Set Favorite Language". Give it some training phrases.
+. Now add a new intent called "Set Favorite Language". Give it some training phrases and a response.
 +
 IMPORTANT: DialogFlow will only recognize values for custom entities that are included in the Entities list or as a synonym. If you have a favorite programming language that's not on the list, you need to add it. If you want to be able to match any programming language, you'll need to input the full list of languages (start here https://en.wikipedia.org/wiki/List_of_programming_languages).
 
-
 == Context
+Context is helpful for driving conversations with a conversational agent.
+The context is how DialogFlow keeps track of what your users are talking about.
+For example, let's say you wanted to create a smart home assistant to allow you to turn the lights on and off in your home.
+If your user says "Turn on the lights in the living room," the agent could do that.
+If the user then says "Now turn them off," your agent may not know what "them" refers to.
+That is a part of the context of the conversation.
+Humans learn to understand context without thinking about it, but with our agents we'll need to teach them explicitly.
+
+We will use context to drive a short interview conversation.
+We'll hijack context a bit to tell our agent what questions to ask.
+Let's go back and start with our "Set name" intent.
+
+Each intent has the option to include an input context and an output context.
+Input context refers to the state of the user that would trigger the intent.
+Output context is created after the intent is completed, and can be used to direct future conversation.
+We will create chain of contexts to direct our users through a brief interview.
+
+. Go to your "Set name" intent.
+. Set the output context to `awaiting_programming_language`.
+. Set the "lifespan" of the context to "1". The lifespan refers to how long the agent keeps track of this context. With a lifespan of 1 the `awaiting_programming_language` tag will stick to the user for 1 more message--just long enough to trigger the next conversation.
+. Add a follow-up question to the end of the responses for "Set name": What is your favorite programming language?
+. Save your changes.
+. Open the "Set favorite language" intent.
+. Add an input context of `awaiting_programming_language`.
+. Add an output context of `awaiting_programming_language` with a lifespan of 0. This will get rid of that context for the user, which we want to do now that they have answered the question and triggered the "Set favorite language" intent.
+. Set an output context of `awaiting_color` with a lifespan of 1.
+. Add a follow-up question after your Programming language responses to ask "What's your favorite color?"
+. Create a new intent called "Set Color" for users to enter their favorite color. Give it an input context of `awaiting_color`. Add training phrases for how people might indicate what their favorite color is, and create a new parameter to match the colors they might say. Create a response that repeats the color back to the user.
+
+== Fulfillment
+Fulfillment is where the real magic happens with a DialogFlow agent, but it takes a bit more programming than anything we've done so far.
+Thankfully, we can get through the basics without ever leaving the DialogFlow console.
+
+. Create a new intent called "Add numbers"
+. Create some training phrases with different ways users could ask to add two numbers together. "What's 2.8 plus 12?" or "What do you get when you add 33 and 66?"
+. Enter an action name of `add_numbers`
+. Create two parameters, `number1` and `number2`, and have them match with the entity `@sys.number`.
+. Make sure the entities in your training phrases are matched with the right parameters (they should be two different colors).
+. In the Fulfillment section, turn on "Enable webhook call for this intent"
+. Save your changes
+. Go to the Fulfillment tab on the left.
+. Enable the "Inline Editor"
+
+
+
+== Enable Small Talk
+DialogFlow agents can be given the ability to do a bit of small talk, too.
+This can help make the interactions with it feel a bit more natural.
+To do this, go to the Small Talk section on the left menu, slide the slider to enable, and start customizing your agent's small talk.
+
 
 == Deploy to Google Home
-To test your app out on Google Home, click the "See how it works in Google Assistant" link in the test console. This will drop you in the simulator. There you can follow the same deployment steps as in the Trivia Game tutorial, including adding the Google Home person to your project (gears icon) and sharing the link with them. See <<trivia-game.adoc#deploy,the Trivia Game tutorial>>
+To test your app out on Google Home, click the "See how it works in Google Assistant" link in the test console. This will drop you in the simulator. There you can follow the same deployment steps as in the Trivia Game tutorial, including adding the Google Home person to your project (gears icon) and sharing the link with them. See <<trivia-game.adoc#deploy,the Trivia Game tutorial>>.
 
 // To deploy our action to a Google Home, we'll need to go to the Actions console
 
@@ -203,3 +252,5 @@ To test your app out on Google Home, click the "See how it works in Google Assis
 TIP: You can even export your DialogFlow agent to an Alexa Skill.
 - Import one of the Prebuilt Agents (under Prebuilt Agents on the left). This will create a new Agent with some prepopulated intents.
 - Create an agent that speaks a different language by clicking the \+ next to "en" under your agent's name on the left.
+- Check out the DialogFlow Docs (https://dialogflow.com/docs/) to learn about more things you can do with agents.
+- Fill out more of the Small Talk.
